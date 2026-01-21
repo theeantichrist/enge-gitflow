@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactieve Website</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  <header class="topbar">
+    <h1>Interactieve Website</h1>
+
+    <div class="topbar-actions">
+      <div class="clock" id="clock">--:--:--</div>
+      <button id="themeBtn" class="btn">🌙 Thema</button>
+    </div>
+  </header>
+
+  <main class="layout">
+     <section class="panel">
+      <h2>Bediening</h2>
+
+      <label class="label">Accentkleur</label>
+      <input id="accent" type="range" min="0" max="360" value="210" />
+
+      <div class="divider"></div>
+
+      <label class="label" for="search">Zoeken</label>
+      <input id="search" class="input" type="text" placeholder="Filter items..." />
+
+      <label class="label" for="newItem">Nieuw item</label>
+      <div class="row">
+        <input id="newItem" class="input" type="text" placeholder="Typ iets..." />
+        <button id="addBtn" class="btn">➕</button>
+      </div>
+
+      <button id="clearBtn" class="btn danger">🧹 Alles vw</button>
+
+      <p class="hint">
+        hint
+      </p>
+    </section>
+     <section class="panel">
+      <h2>lijst</h2>
+      <ul id="list" class="list"></ul>
+      <p id="empty" class="empty">no items yet</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="dennenappel"></span>dennenappel</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
